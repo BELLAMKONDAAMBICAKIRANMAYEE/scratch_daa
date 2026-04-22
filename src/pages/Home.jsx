@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <div className="container">
-      <h1>Python & CS Learning</h1>
+      <h1>Python Learning with Scratch_daa..😎</h1>
 
       <div className="card">
         <h2>Explore Topics</h2>

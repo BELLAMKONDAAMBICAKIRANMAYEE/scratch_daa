@@ -1,38 +1,54 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import data from "../data/syllabus.json";
 
 function Sidebar({ isOpen, setIsOpen }) {
   const navigate = useNavigate();
+  const [openTopicId, setOpenTopicId] = useState(null);
+
+  const toggleTopic = (id) => {
+    setOpenTopicId(openTopicId === id ? null : id);
+  };
 
   return (
-    <div className={`sidebar ${isOpen ? "open" : ""}`}>
-      <button className="close-btn" onClick={() => setIsOpen(false)}>
-        ✖
+    <div className={`sidebar ${isOpen ? "expanded" : "collapsed"}`}>
+
+      {/* Toggle Button */}
+      <button
+        className="toggle-btn"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {isOpen ? "⬅" : "➡"}
       </button>
 
-      <h3>📚 Topics</h3>
+      <h3>{isOpen ? "📚 Topics" : "📚"}</h3>
 
-      {data.map((t) => (
+      {data.topics.map((t) => (
         <div key={t.id} className="sidebar-item">
-          {/* Learn Topic */}
+
+          {/* Topic */}
           <p
-            onClick={() => {
-              navigate(`/topic/${t.id}`);
-              setIsOpen(false);
-            }}
+            className="topic-title"
+            onClick={() => toggleTopic(t.id)}
           >
-            {t.title}
+            {isOpen ? t.title : "•"}
+            {isOpen && (openTopicId === t.id ? " ▲" : " ▼")}
           </p>
 
-          {/* Quiz Button */}
-          {/* <button
-            onClick={() => {
-              navigate(`/quiz/${t.id}`);
-              setIsOpen(false);
-            }}
-          >
-            Quiz
-          </button> */}
+          {/* Subtopics */}
+          {isOpen && openTopicId === t.id && (
+            <ul className="subtopic-list">
+              {t.subtopics.map((sub) => (
+                <li
+                  key={sub.id}
+                  onClick={() => navigate(`/topic/${t.id}/${sub.id}`)}
+                >
+                  {sub.title}
+                </li>
+              ))}
+            </ul>
+          )}
+
         </div>
       ))}
     </div>

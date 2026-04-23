@@ -1,387 +1,394 @@
-[
-  {
-    "id": 1,
-    "title": "Introduction to Python",
-    "definition": "Python is a high-level interpreted programming language.",
-    "flow": "Code → Interpreter → Execution → Output",
-    "rules": ["Case-sensitive", "No semicolon needed", "Indentation required"],
-    "flowcharts": ["Start → Code → Run → Output → End"],
-    "tables": [
-      {
-        "title": "Features",
-        "columns": ["Feature", "Meaning"],
-        "rows": [
-          ["Interpreted", "No compilation"],
-          ["Dynamic", "No type declaration"],
-          ["Readable", "Simple syntax"]
-        ]
-      }
-    ],
-    "examples": [
-      {"code": "print('Hello')"},
-      {"code": "print(5+5)"},
-      {"code": "print(type(10))"},
-      {"code": "print('A'*3)"},
-      {"code": "print(len('abc'))"},
-      {"code": "print(10/2)"},
-      {"code": "print(2**3)"},
-      {"code": "print(True)"},
-      {"code": "print(False)"},
-      {"code": "print('Python')"}
-    ],
-    "important_notes": ["Beginner friendly", "Widely used"],
-    "concept": "Python executes code line by line.",
-    "summary": "Easy and powerful language",
-    "real_time_examples": ["Automation", "Web apps", "AI"]
-  },
+{
+  "topics": [
+    {
+      "id": 1,
+      "title": "Introduction",
+      "definition": "Python is a high-level, interpreted programming language used for various applications.",
+      "flow": "Idea → Code → Interpreter → Output",
+      "rules": ["Case-sensitive", "Indentation matters"],
+      "flowcharts": ["Start → Code → Run → Output → End"],
+      "tables": [],
+      "examples": [
+        {
+          "code": "print('Hello World')",
+          "explanation": "Basic Python output"
+        }
+      ],
+      "important_notes": ["Python is beginner-friendly"],
+      "summary": "Python is easy and powerful.",
+      "real_time_examples": ["Web apps", "Automation"],
+      "subtopics": [
+        { "id": "1.1", "title": "What is Programming?" },
+        { "id": "1.2", "title": "Types of Languages" },
+        { "id": "1.3", "title": "What is Python?" },
+        { "id": "1.4", "title": "Features" },
+        { "id": "1.5", "title": "Why Python?" },
+        { "id": "1.6", "title": "Applications" },
+        { "id": "1.7", "title": "Python vs Others" }
+      ]
+    },
 
-  {
-    "id": 2,
-    "title": "Variables & Data Types",
-    "definition": "Variables store data, types define data nature.",
-    "flow": "Declare → Assign → Use",
-    "rules": ["No type declaration", "Valid naming rules"],
-    "flowcharts": ["Start → Assign → Use → End"],
-    "tables": [
-      {
-        "title": "Types",
-        "columns": ["Type", "Example"],
-        "rows": [["int","10"],["float","10.5"],["str","hi"],["bool","True"]]
-      }
-    ],
-    "examples": [
-      {"code": "x=10"},
-      {"code": "y=5.5"},
-      {"code": "name='Ram'"},
-      {"code": "flag=True"},
-      {"code": "a,b=1,2"},
-      {"code": "x=y=10"},
-      {"code": "print(type(x))"},
-      {"code": "del x"},
-      {"code": "x=None"},
-      {"code": "print(id(x))"}
-    ],
-    "important_notes": ["Dynamic typing"],
-    "concept": "Variables reference memory",
-    "summary": "Stores and manages data",
-    "real_time_examples": ["Form inputs", "API data"]
-  },
+    {
+      "id": 2,
+      "title": "Installation & Setup",
+      "definition": "Setting up Python environment for development.",
+      "flow": "Download → Install → Configure → Run",
+      "rules": ["Set PATH correctly"],
+      "flowcharts": ["Download → Install → Verify → Start Coding"],
+      "tables": [],
+      "examples": [
+        {
+          "code": "python --version",
+          "explanation": "Check installation"
+        }
+      ],
+      "important_notes": ["Use VS Code"],
+      "summary": "Setup Python environment.",
+      "real_time_examples": ["Developer setup"],
+      "subtopics": [
+        { "id": "2.1", "title": "Install Python" },
+        { "id": "2.2", "title": "Environment Variables" },
+        { "id": "2.3", "title": "IDLE" },
+        { "id": "2.4", "title": "VS Code Setup" },
+        { "id": "2.5", "title": "First Program" },
+        { "id": "2.6", "title": "Terminal Usage" }
+      ]
+    },
 
-  {
-    "id": 3,
-    "title": "Operators",
-    "definition": "Used to perform operations.",
-    "flow": "Input → Operation → Output",
-    "rules": ["Use correct operator"],
-    "flowcharts": ["Input → Apply → Result"],
-    "tables": [
-      {
-        "title": "Operators",
-        "columns": ["Type","Example"],
-        "rows": [["+","Addition"],["==","Compare"],["and","Logical"]]
-      }
-    ],
-    "examples": [
-      {"code":"5+2"},
-      {"code":"5-2"},
-      {"code":"5*2"},
-      {"code":"5/2"},
-      {"code":"5//2"},
-      {"code":"5%2"},
-      {"code":"2**3"},
-      {"code":"5>2"},
-      {"code":"5==5"},
-      {"code":"True and False"}
-    ],
-    "important_notes": ["Operator precedence matters"],
-    "concept": "Operators manipulate data",
-    "summary": "Performs calculations",
-    "real_time_examples": ["Billing systems"]
-  },
+    {
+      "id": 3,
+      "title": "Basics of Python",
+      "definition": "Core building blocks of Python.",
+      "flow": "Input → Process → Output",
+      "rules": ["Variables must be defined"],
+      "flowcharts": [],
+      "tables": [],
+      "examples": [
+        {
+          "code": "a = 10\nprint(a)",
+          "explanation": "Variable usage"
+        }
+      ],
+      "important_notes": ["Data types are important"],
+      "summary": "Basic syntax and usage.",
+      "real_time_examples": ["Form inputs"],
+      "subtopics": [
+        { "id": "3.1", "title": "Variables" },
+        { "id": "3.2", "title": "Data Types" },
+        { "id": "3.3", "title": "Type Casting" },
+        { "id": "3.4", "title": "Input/Output" },
+        { "id": "3.5", "title": "Comments" }
+      ]
+    },
 
-  {
-    "id": 4,
-    "title": "Conditional Statements",
-    "definition": "Execute based on conditions",
-    "flow": "Condition → True/False",
-    "rules": ["Indentation required"],
-    "flowcharts": ["Start → Condition → Yes/No"],
-    "tables": [],
-    "examples": [
-      {"code":"if x>5: print(x)"},
-      {"code":"if x>5: print(x)\nelse: print(0)"},
-      {"code":"if x==10: print('Yes')"},
-      {"code":"if x!=5: print('No')"},
-      {"code":"if x>0: pass"},
-      {"code":"if True: print('ok')"},
-      {"code":"if x: print(x)"},
-      {"code":"if not x: print(x)"},
-      {"code":"if x>5 and x<10: print(x)"},
-      {"code":"print('Yes') if x>5 else print('No')"}
-    ],
-    "important_notes": ["Avoid deep nesting"],
-    "concept": "Decision making",
-    "summary": "Controls flow",
-    "real_time_examples": ["Login check"]
-  },
+    {
+      "id": 4,
+      "title": "Operators",
+      "definition": "Operators perform operations on variables.",
+      "flow": "Input → Operation → Result",
+      "rules": ["Follow precedence"],
+      "flowcharts": [],
+      "tables": [],
+      "examples": [
+        {
+          "code": "print(5+2)",
+          "explanation": "Addition"
+        }
+      ],
+      "important_notes": ["Know operator types"],
+      "summary": "Operators manipulate data.",
+      "real_time_examples": ["Calculators"],
+      "subtopics": [
+        { "id": "4.1", "title": "Arithmetic" },
+        { "id": "4.2", "title": "Comparison" },
+        { "id": "4.3", "title": "Logical" },
+        { "id": "4.4", "title": "Assignment" },
+        { "id": "4.5", "title": "Bitwise" },
+        { "id": "4.6", "title": "Identity & Membership" }
+      ]
+    },
 
-  {
-    "id": 5,
-    "title": "Loops",
-    "definition": "Repeat execution",
-    "flow": "Start → Condition → Loop → End",
-    "rules": ["Avoid infinite loops"],
-    "flowcharts": ["Start → Loop → Condition → End"],
-    "tables": [],
-    "examples": [
-      {"code":"for i in range(5): print(i)"},
-      {"code":"while x<5: x+=1"},
-      {"code":"for i in [1,2,3]: print(i)"},
-      {"code":"for i in 'abc': print(i)"},
-      {"code":"break"},
-      {"code":"continue"},
-      {"code":"pass"},
-      {"code":"nested loop"},
-      {"code":"sum loop"},
-      {"code":"factorial loop"}
-    ],
-    "important_notes": ["Use break carefully"],
-    "concept": "Iteration",
-    "summary": "Repeats code",
-    "real_time_examples": ["Processing lists"]
-  },
+    {
+      "id": 5,
+      "title": "Conditional Statements",
+      "definition": "Used to make decisions in code.",
+      "flow": "Condition → True/False → Execute",
+      "rules": ["Indentation required"],
+      "flowcharts": ["Start → Condition → Yes/No → End"],
+      "tables": [],
+      "examples": [
+        {
+          "code": "if a>10:\n print('Big')",
+          "explanation": "Basic condition"
+        }
+      ],
+      "important_notes": ["Used in decision making"],
+      "summary": "Controls program flow.",
+      "real_time_examples": ["Login systems"],
+      "subtopics": [
+        { "id": "5.1", "title": "if" },
+        { "id": "5.2", "title": "if-else" },
+        { "id": "5.3", "title": "elif" },
+        { "id": "5.4", "title": "Nested if" }
+      ]
+    },
 
-  {
-    "id": 6,
-    "title": "Functions",
-    "definition": "Reusable code block",
-    "flow": "Define → Call → Return",
-    "rules": ["Use return"],
-    "flowcharts": ["Define → Call → Output"],
-    "tables": [],
-    "examples": [
-      {"code":"def f(): pass"},
-      {"code":"def add(a,b): return a+b"},
-      {"code":"f()"},
-      {"code":"add(2,3)"},
-      {"code":"lambda x:x+1"},
-      {"code":"default args"},
-      {"code":"*args"},
-      {"code":"**kwargs"},
-      {"code":"recursion"},
-      {"code":"docstring"}
-    ],
-    "important_notes": ["Reusable logic"],
-    "concept": "Modular coding",
-    "summary": "Avoid repetition",
-    "real_time_examples": ["API calls"]
-  },
+    {
+      "id": 6,
+      "title": "Loops",
+      "definition": "Used to repeat tasks.",
+      "flow": "Start → Loop → Condition → End",
+      "rules": ["Avoid infinite loops"],
+      "flowcharts": [],
+      "tables": [],
+      "examples": [
+        {
+          "code": "for i in range(5): print(i)",
+          "explanation": "Loop example"
+        }
+      ],
+      "important_notes": ["Important for patterns"],
+      "summary": "Loops automate repetition.",
+      "real_time_examples": ["Data processing"],
+      "subtopics": [
+        { "id": "6.1", "title": "for loop" },
+        { "id": "6.2", "title": "while loop" },
+        { "id": "6.3", "title": "break" },
+        { "id": "6.4", "title": "continue" },
+        { "id": "6.5", "title": "pass" }
+      ]
+    },
 
-  {
-    "id": 7,
-    "title": "Strings",
-    "definition": "Sequence of characters",
-    "flow": "Input → Operation → Output",
-    "rules": ["Immutable"],
-    "flowcharts": [],
-    "tables": [],
-    "examples": [
-      {"code":"'hello'.upper()"},
-      {"code":"'hi'.lower()"},
-      {"code":"'abc'[0]"},
-      {"code":"'abc'[0:2]"},
-      {"code":"'a'*3"},
-      {"code":"'a'+'b'"},
-      {"code":"len('abc')"},
-      {"code":"'abc'.replace('a','x')"},
-      {"code":"'abc'.split()"},
-      {"code":"' '.join(['a','b'])"}
-    ],
-    "important_notes": ["Immutable"],
-    "concept": "Text processing",
-    "summary": "Handles text",
-    "real_time_examples": ["Search systems"]
-  },
+    {
+      "id": 7,
+      "title": "Strings",
+      "definition": "Sequence of characters.",
+      "flow": "Input → Process → Output",
+      "rules": ["Immutable"],
+      "flowcharts": [],
+      "tables": [],
+      "examples": [
+        {
+          "code": "print('Hello'[0])",
+          "explanation": "Indexing"
+        }
+      ],
+      "important_notes": ["Strings are immutable"],
+      "summary": "Used for text handling.",
+      "real_time_examples": ["User input"],
+      "subtopics": [
+        { "id": "7.1", "title": "Basics" },
+        { "id": "7.2", "title": "Indexing" },
+        { "id": "7.3", "title": "Methods" }
+      ]
+    },
 
-  {
-    "id": 8,
-    "title": "Lists",
-    "definition": "Ordered mutable collection",
-    "flow": "Create → Modify → Access",
-    "rules": ["Mutable"],
-    "flowcharts": [],
-    "tables": [],
-    "examples": [
-      {"code":"a=[1,2]"},
-      {"code":"a.append(3)"},
-      {"code":"a.pop()"},
-      {"code":"a.sort()"},
-      {"code":"a.reverse()"},
-      {"code":"a[0]"},
-      {"code":"len(a)"},
-      {"code":"sum(a)"},
-      {"code":"max(a)"},
-      {"code":"min(a)"}
-    ],
-    "important_notes": ["Allows duplicates"],
-    "concept": "Collection handling",
-    "summary": "Stores multiple values",
-    "real_time_examples": ["Cart items"]
-  },
+    {
+      "id": 8,
+      "title": "Lists",
+      "definition": "Ordered collection.",
+      "flow": "Store → Access → Modify",
+      "rules": ["Mutable"],
+      "flowcharts": [],
+      "tables": [],
+      "examples": [
+        {
+          "code": "a=[1,2,3]\nprint(a)",
+          "explanation": "List example"
+        }
+      ],
+      "important_notes": ["Supports duplicates"],
+      "summary": "Flexible data storage.",
+      "real_time_examples": ["Shopping cart"],
+      "subtopics": [
+        { "id": "8.1", "title": "Basics" },
+        { "id": "8.2", "title": "Methods" }
+      ]
+    },
 
-  {
-    "id": 9,
-    "title": "Tuples",
-    "definition": "Immutable collection",
-    "flow": "Create → Access",
-    "rules": ["Immutable"],
-    "flowcharts": [],
-    "tables": [],
-    "examples": [
-      {"code":"t=(1,2)"},
-      {"code":"t[0]"},
-      {"code":"len(t)"},
-      {"code":"t.count(1)"},
-      {"code":"t.index(2)"},
-      {"code":"tuple([1,2])"},
-      {"code":"nested tuple"},
-      {"code":"unpacking"},
-      {"code":"single element"},
-      {"code":"iteration"}
-    ],
-    "important_notes": ["Faster than list"],
-    "concept": "Fixed data",
-    "summary": "Immutable list",
-    "real_time_examples": ["Coordinates"]
-  },
+    {
+      "id": 9,
+      "title": "Tuples",
+      "definition": "Immutable collection.",
+      "flow": "Store → Access",
+      "rules": ["Cannot modify"],
+      "examples": [
+        {
+          "code": "t=(1,2)\nprint(t)",
+          "explanation": "Tuple"
+        }
+      ],
+      "important_notes": ["Faster than lists"],
+      "summary": "Fixed data.",
+      "real_time_examples": ["Coordinates"],
+      "subtopics": [
+        { "id": "9.1", "title": "Basics" }
+      ]
+    },
 
-  {
-    "id": 10,
-    "title": "Dictionaries",
-    "definition": "Key-value pairs",
-    "flow": "Key → Value → Access",
-    "rules": ["Keys unique"],
-    "flowcharts": [],
-    "tables": [],
-    "examples": [
-      {"code":"d={'a':1}"},
-      {"code":"d['a']"},
-      {"code":"d.get('a')"},
-      {"code":"d.keys()"},
-      {"code":"d.values()"},
-      {"code":"d.items()"},
-      {"code":"d.update({'b':2})"},
-      {"code":"del d['a']"},
-      {"code":"len(d)"},
-      {"code":"loop dict"}
-    ],
-    "important_notes": ["Fast lookup"],
-    "concept": "Mapping",
-    "summary": "Stores key-value",
-    "real_time_examples": ["User data"]
-  },
+    {
+      "id": 10,
+      "title": "Sets",
+      "definition": "Unordered unique elements.",
+      "flow": "Insert → Remove → Operations",
+      "rules": ["No duplicates"],
+      "examples": [
+        {
+          "code": "s={1,2,2}\nprint(s)",
+          "explanation": "Unique values"
+        }
+      ],
+      "important_notes": ["Fast operations"],
+      "summary": "Useful for unique data.",
+      "real_time_examples": ["Tags system"],
+      "subtopics": [
+        { "id": "10.1", "title": "Basics" }
+      ]
+    },
 
-  {
-    "id": 11,
-    "title": "File Handling",
-    "definition": "Read/write files",
-    "flow": "Open → Read/Write → Close",
-    "rules": ["Close file"],
-    "flowcharts": [],
-    "tables": [],
-    "examples": [
-      {"code":"open('a.txt','r')"},
-      {"code":"open('a.txt','w')"},
-      {"code":"f.read()"},
-      {"code":"f.write()"},
-      {"code":"f.close()"},
-      {"code":"with open()"},
-      {"code":"readline"},
-      {"code":"readlines"},
-      {"code":"append"},
-      {"code":"file exists"}
-    ],
-    "important_notes": ["Use with"],
-    "concept": "Persistent storage",
-    "summary": "Handles files",
-    "real_time_examples": ["Logs"]
-  },
+    {
+      "id": 11,
+      "title": "Dictionaries",
+      "definition": "Key-value pairs.",
+      "flow": "Key → Value → Access",
+      "rules": ["Keys must be unique"],
+      "examples": [
+        {
+          "code": "d={'a':1}\nprint(d['a'])",
+          "explanation": "Access value"
+        }
+      ],
+      "important_notes": ["Fast lookup"],
+      "summary": "Structured data.",
+      "real_time_examples": ["User data"],
+      "subtopics": [
+        { "id": "11.1", "title": "Basics" }
+      ]
+    },
 
-  {
-    "id": 12,
-    "title": "Exception Handling",
-    "definition": "Handle errors",
-    "flow": "Try → Error → Except",
-    "rules": ["Catch specific errors"],
-    "flowcharts": [],
-    "tables": [],
-    "examples": [
-      {"code":"try: pass"},
-      {"code":"except: pass"},
-      {"code":"finally"},
-      {"code":"raise"},
-      {"code":"custom error"},
-      {"code":"multiple except"},
-      {"code":"else block"},
-      {"code":"ZeroDivisionError"},
-      {"code":"TypeError"},
-      {"code":"ValueError"}
-    ],
-    "important_notes": ["Avoid crash"],
-    "concept": "Error control",
-    "summary": "Handles runtime errors",
-    "real_time_examples": ["API errors"]
-  },
+    {
+      "id": 12,
+      "title": "Functions",
+      "definition": "Reusable code blocks.",
+      "flow": "Call → Execute → Return",
+      "rules": ["Define before use"],
+      "examples": [
+        {
+          "code": "def add(a,b): return a+b",
+          "explanation": "Function"
+        }
+      ],
+      "important_notes": ["Improves reuse"],
+      "summary": "Modular coding.",
+      "real_time_examples": ["API calls"],
+      "subtopics": [
+        { "id": "12.1", "title": "Basics" }
+      ]
+    },
 
-  {
-    "id": 13,
-    "title": "OOP",
-    "definition": "Object-oriented programming",
-    "flow": "Class → Object → Methods",
-    "rules": ["Use self"],
-    "flowcharts": [],
-    "tables": [],
-    "examples": [
-      {"code":"class A: pass"},
-      {"code":"obj=A()"},
-      {"code":"def __init__"},
-      {"code":"inheritance"},
-      {"code":"polymorphism"},
-      {"code":"encapsulation"},
-      {"code":"method override"},
-      {"code":"class variable"},
-      {"code":"instance variable"},
-      {"code":"static method"}
-    ],
-    "important_notes": ["Code reuse"],
-    "concept": "Real-world modeling",
-    "summary": "Object based design",
-    "real_time_examples": ["Apps"]
-  },
+    {
+      "id": 13,
+      "title": "OOP",
+      "definition": "Object-Oriented Programming.",
+      "flow": "Class → Object → Methods",
+      "rules": ["Encapsulation"],
+      "examples": [
+        {
+          "code": "class A:\n pass",
+          "explanation": "Class"
+        }
+      ],
+      "important_notes": ["Very important"],
+      "summary": "Real-world modeling.",
+      "real_time_examples": ["Bank system"],
+      "subtopics": [
+        { "id": "13.1", "title": "Class & Object" }
+      ]
+    },
 
-  {
-    "id": 14,
-    "title": "Advanced Python",
-    "definition": "Advanced features",
-    "flow": "Concept → Apply",
-    "rules": [],
-    "flowcharts": [],
-    "tables": [],
-    "examples": [
-      {"code":"lambda x:x+1"},
-      {"code":"list comprehension"},
-      {"code":"generator"},
-      {"code":"decorator"},
-      {"code":"map"},
-      {"code":"filter"},
-      {"code":"reduce"},
-      {"code":"zip"},
-      {"code":"enumerate"},
-      {"code":"set comprehension"}
-    ],
-    "important_notes": ["Write efficient code"],
-    "concept": "Optimized coding",
-    "summary": "Advanced tools",
-    "real_time_examples": ["Data pipelines"]
-  }
-]
+    {
+      "id": 14,
+      "title": "Exception Handling",
+      "definition": "Handling errors.",
+      "flow": "Try → Error → Except",
+      "examples": [
+        {
+          "code": "try:\n x=1/0\nexcept:\n print('Error')",
+          "explanation": "Catch error"
+        }
+      ],
+      "important_notes": ["Prevents crashes"],
+      "summary": "Error control.",
+      "real_time_examples": ["Login errors"],
+      "subtopics": []
+    },
+
+    {
+      "id": 15,
+      "title": "File Handling",
+      "definition": "Working with files.",
+      "flow": "Open → Read/Write → Close",
+      "examples": [
+        {
+          "code": "f=open('a.txt','r')",
+          "explanation": "Open file"
+        }
+      ],
+      "important_notes": ["Close files"],
+      "summary": "Data storage.",
+      "real_time_examples": ["Logs"],
+      "subtopics": []
+    },
+
+    {
+      "id": 16,
+      "title": "Modules & Packages",
+      "definition": "Reusable code files.",
+      "flow": "Import → Use",
+      "examples": [
+        {
+          "code": "import math",
+          "explanation": "Import module"
+        }
+      ],
+      "important_notes": ["Organized code"],
+      "summary": "Code reuse.",
+      "real_time_examples": ["Libraries"],
+      "subtopics": []
+    },
+
+    {
+      "id": 17,
+      "title": "Advanced Topics",
+      "definition": "Advanced Python concepts.",
+      "flow": "Concept → Apply",
+      "examples": [
+        {
+          "code": "lambda x:x+1",
+          "explanation": "Lambda"
+        }
+      ],
+      "important_notes": ["Used in interviews"],
+      "summary": "Advanced skills.",
+      "real_time_examples": ["Data science"],
+      "subtopics": []
+    },
+
+    {
+      "id": 18,
+      "title": "Projects",
+      "definition": "Real-world applications.",
+      "flow": "Idea → Build → Deploy",
+      "examples": [],
+      "important_notes": ["Practice required"],
+      "summary": "Hands-on learning.",
+      "real_time_examples": ["Apps"],
+      "subtopics": [
+        { "id": "18.1", "title": "Student Management" },
+        { "id": "18.2", "title": "Calculator" },
+        { "id": "18.3", "title": "Guess Game" },
+        { "id": "18.4", "title": "Flask API" }
+      ]
+    }
+  ]
+}

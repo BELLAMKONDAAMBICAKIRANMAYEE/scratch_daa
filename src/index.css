@@ -58,3 +58,41 @@ footer {
   bottom: 0;
   width: 100%;
 }
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -290px;
+  width: 260px;
+  height: 100%;
+  background: #222;
+  color: white;
+  padding: 15px;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-item {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 8px;
+}
+
+.sidebar-item p {
+  cursor: pointer;
+  margin: 0;
+}
+
+.sidebar-item button {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.close-btn {
+  background: red;
+  color: white;
+  margin-bottom: 10px;
+}

@@ -132,13 +132,21 @@ nav a:hover {
   margin: 20px 10px ;
 
 }
-.subtopic-list{
-margin-left: 30px;
-margin-top: 3px;
-font-size: 14px;
+.subtopic-list li {
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 5px;
+  transition: 0.2s;
 }
-.subtopic-list li{
-  margin-top: 3px;
+
+.subtopic-list li:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* ✅ ACTIVE ITEM */
+.subtopic-list li.active-subtopic {
+  color: #4CAF50;
+  font-weight: bold;
 }
 
 /* ===== MOBILE RESPONSIVE 🔥 ===== */

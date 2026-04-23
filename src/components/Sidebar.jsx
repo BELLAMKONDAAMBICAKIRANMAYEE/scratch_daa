@@ -1,10 +1,24 @@
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import data from "../data/syllabus.json";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 function Sidebar({ isOpen, setIsOpen }) {
   const navigate = useNavigate();
+  const location = useLocation();
+
   const [openTopicId, setOpenTopicId] = useState(null);
+
+  // 🔥 Extract topicId & subId from URL
+  const pathParts = location.pathname.split("/");
+  const topicId = pathParts[2];
+  const subId = pathParts[3];
+
+  // 🔥 Auto open topic when URL changes
+  useEffect(() => {
+    if (topicId) {
+      setOpenTopicId(Number(topicId));
+    }
+  }, [topicId]);
 
   const toggleTopic = (id) => {
     setOpenTopicId(openTopicId === id ? null : id);
@@ -41,6 +55,7 @@ function Sidebar({ isOpen, setIsOpen }) {
               {t.subtopics.map((sub) => (
                 <li
                   key={sub.id}
+                  className={String(sub.id) === subId ? "active-subtopic" : ""}
                   onClick={() => navigate(`/topic/${t.id}/${sub.id}`)}
                 >
                   {sub.title}

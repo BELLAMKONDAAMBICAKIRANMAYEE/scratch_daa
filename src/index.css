@@ -1,8 +1,8 @@
+/* ===== GLOBAL ===== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #f5f7fb;
-
 }
 
 h1, h2 {
@@ -22,21 +22,31 @@ button {
 button:hover {
   background: #45a049;
 }
-nav {
-  background: #222;
-  padding: 15px;
-}
 
-nav a {
+/* ===== NAVBAR ===== */
+.navbar {
+  height: 60px;
+  background: #111;
   color: white;
-  text-decoration: none;
-  margin-right: 15px;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
 }
 
-nav a:hover {
-  color: #4CAF50;
+.menu-btn {
+  font-size: 18px;
+  cursor: pointer;
 }
+
+/* Hide menu button on desktop */
+@media (min-width: 769px) {
+  .menu-btn {
+    display: none;
+  }
+}
+
+/* ===== CARDS ===== */
 .card {
   background: white;
   padding: 15px;
@@ -50,12 +60,6 @@ nav a:hover {
   margin: auto;
   padding: 20px;
 }
-/* Layout wrapper */
-.layout {
-  display: flex;
-}
-
-
 
 /* ===== LAYOUT ===== */
 .app-layout {
@@ -64,23 +68,20 @@ nav a:hover {
 
 /* ===== SIDEBAR ===== */
 .sidebar {
-  height: 100vh;
-  background: #1e1e2f;
-  color: white;
   position: fixed;
   top: 0;
   left: 0;
+  height: 100vh;
+  width: 250px;
+  background: #1e1e2f;
+  color: white;
   overflow-y: auto;
   transition: all 0.3s ease;
   padding: 10px;
+  z-index: 1000;
 }
 
-/* Expanded */
-.sidebar.expanded {
-  width: 250px;
-}
-
-/* Collapsed */
+/* Collapsed sidebar */
 .sidebar.collapsed {
   width: 70px;
 }
@@ -88,30 +89,13 @@ nav a:hover {
 /* ===== MAIN AREA ===== */
 .main-area {
   width: 100%;
+  margin-left: 250px; /* default */
   transition: margin-left 0.3s ease;
 }
 
-/* Shift based on sidebar */
-.app-layout.expanded .main-area {
-  margin-left: 270px;
-}
-
-.app-layout.collapsed .main-area {
-  margin-left: 90px;
-}
-
-
-
-
-
-/* ===== NAVBAR ===== */
-.navbar {
-  height: 60px;
-  background: #111;
-  color: white;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
+/* Adjust when collapsed */
+.sidebar.collapsed ~ .main-area {
+  margin-left: 70px;
 }
 
 /* ===== CONTENT ===== */
@@ -119,7 +103,11 @@ nav a:hover {
   padding: 20px;
 }
 
-/* ===== TOGGLE BUTTON ===== */
+/* ===== SIDEBAR ITEMS ===== */
+.sidebar-item {
+  margin: 20px 10px;
+}
+
 .toggle-btn {
   background: #444;
   border: none;
@@ -128,10 +116,8 @@ nav a:hover {
   cursor: pointer;
   margin-bottom: 10px;
 }
-.sidebar-item{
-  margin: 20px 10px ;
 
-}
+/* ===== SUBTOPICS ===== */
 .subtopic-list li {
   margin-top: 10px;
   cursor: pointer;
@@ -143,28 +129,39 @@ nav a:hover {
   background: rgba(255,255,255,0.1);
 }
 
-/* ✅ ACTIVE ITEM */
 .subtopic-list li.active-subtopic {
   color: #4CAF50;
   font-weight: bold;
 }
 
-/* ===== MOBILE RESPONSIVE 🔥 ===== */
+/* ===== OVERLAY (MOBILE) ===== */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
-  
-  /* Sidebar becomes overlay */
+
+  /* Sidebar hidden by default */
   .sidebar {
     left: -250px;
     width: 250px;
   }
 
+  /* Show sidebar */
   .sidebar.expanded {
     left: 0;
   }
 
-  /* Content full width */
+  /* Main area full width */
   .main-area {
     margin-left: 0 !important;
-    width: 100% !important;
+    width: 100%;
   }
 }

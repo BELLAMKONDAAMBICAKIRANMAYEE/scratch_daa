@@ -11,18 +11,23 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 
 function App() {
-  const [isOpen, setIsOpen] = useState(true); // true = expanded, false = collapsed
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <BrowserRouter>
-      <div className={`app-layout ${isOpen ? "expanded" : "collapsed"}`}>
-        
-        {/* ✅ Sidebar */}
+      <div className="app-layout">
+
+        {/* 🔥 Overlay (mobile only) */}
+        {isOpen && (
+          <div className="overlay" onClick={() => setIsOpen(false)}></div>
+        )}
+
+        {/* Sidebar */}
         <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
-        {/* ✅ Main Area */}
+        {/* Main Area */}
         <div className="main-area">
-          <Navbar />
+          <Navbar toggleSidebar={() => setIsOpen(!isOpen)} />
 
           <div className="content">
             <Routes>

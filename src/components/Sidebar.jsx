@@ -8,12 +8,12 @@ function Sidebar({ isOpen, setIsOpen }) {
 
   const [openTopicId, setOpenTopicId] = useState(null);
 
-  // 🔥 Extract topicId & subId from URL
+  // Extract URL params
   const pathParts = location.pathname.split("/");
   const topicId = pathParts[2];
   const subId = pathParts[3];
 
-  // 🔥 Auto open topic when URL changes
+  // Auto-open topic
   useEffect(() => {
     if (topicId) {
       setOpenTopicId(Number(topicId));
@@ -27,11 +27,8 @@ function Sidebar({ isOpen, setIsOpen }) {
   return (
     <div className={`sidebar ${isOpen ? "expanded" : "collapsed"}`}>
 
-      {/* Toggle Button */}
-      <button
-        className="toggle-btn"
-        onClick={() => setIsOpen(!isOpen)}
-      >
+      {/* Toggle */}
+      <button className="toggle-btn" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? "⬅" : "➡"}
       </button>
 
@@ -41,10 +38,7 @@ function Sidebar({ isOpen, setIsOpen }) {
         <div key={t.id} className="sidebar-item">
 
           {/* Topic */}
-          <p
-            className="topic-title"
-            onClick={() => toggleTopic(t.id)}
-          >
+          <p className="topic-title" onClick={() => toggleTopic(t.id)}>
             {isOpen ? t.title : "•"}
             {isOpen && (openTopicId === t.id ? " ▲" : " ▼")}
           </p>
@@ -56,7 +50,10 @@ function Sidebar({ isOpen, setIsOpen }) {
                 <li
                   key={sub.id}
                   className={String(sub.id) === subId ? "active-subtopic" : ""}
-                  onClick={() => navigate(`/topic/${t.id}/${sub.id}`)}
+                  onClick={() => {
+                    navigate(`/topic/${t.id}/${sub.id}`);
+                    setIsOpen(false); // 🔥 close on mobile
+                  }}
                 >
                   {sub.title}
                 </li>

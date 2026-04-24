@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import thoughts from "../data/thoughts.json";
+import thoughts from "../data/Thoughts.json";
 
 function Home() {
   // extract only text
@@ -13,7 +13,7 @@ function Home() {
       // random quote
       const randomIndex = Math.floor(Math.random() * texts.length);
       setQuoteIndex(randomIndex);
-    }, 60000); // 10 minutes
+    }, 20000); // 10 minutes
 
     return () => clearInterval(interval);
   }, [texts.length]);

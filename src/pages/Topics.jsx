@@ -20,6 +20,9 @@ function Topics() {
           <button onClick={() => navigate(`/quiz/${t.id}`)}>
             Start Quiz
           </button>
+          {/* <button onClick={() => navigate(`/code/${t.id}`)}>
+  Practice Coding
+</button> */}
         </div>
       ))}
 

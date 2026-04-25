@@ -13,7 +13,7 @@ function Home() {
       // random quote
       const randomIndex = Math.floor(Math.random() * texts.length);
       setQuoteIndex(randomIndex);
-    }, 20000); // 10 minutes
+    }, 40000); // 10 minutes
 
     return () => clearInterval(interval);
   }, [texts.length]);
@@ -24,13 +24,16 @@ function Home() {
       <h1>Python Learning with Scratch_daa..😎</h1>
 
       {/* 🔥 Motivational Quote */}
-      <p style={{
+      <marquee style={{
         fontStyle: "italic",
         marginBottom: "20px",
-        color: "#555"
+        color: "white",
+        backgroundColor:"black",
+        fontWeight:"bold",
+        padding:"10px"
       }}>
         "{texts[quoteIndex]}"
-      </p>
+      </marquee>
 
       <div className="card">
         <h2>Explore Topics</h2>

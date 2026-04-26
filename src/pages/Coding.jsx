@@ -98,6 +98,7 @@ function Coding() {
 
       <h4>Starter Code:</h4>
       <pre className="code-box">{currentQuestion.starterCode}</pre>
+ <pre className="code-box">{currentQuestion.examples}</pre>
 
       {/* Buttons */}
       <div>

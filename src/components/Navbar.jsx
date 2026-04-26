@@ -1,20 +1,31 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Navbar({ toggleSidebar }) {
+  const navigate = useNavigate();
+
+  // ✅ get name
+  const name = localStorage.getItem("name");
+
+  const logout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("name"); // ✅ clear name too
+    navigate("/signup");
+  };
+
   return (
     <nav className="navbar">
+      <button onClick={toggleSidebar}>☰</button>
 
-      <button className="menu-btn" onClick={toggleSidebar}>
-        ☰
-      </button>
+      <button onClick={() => navigate("/home")}>Home</button>
+      <button onClick={() => navigate("/topics")}>Topics</button>
+      <button onClick={() => navigate("/coding")}>Code</button>
 
-      <Link to="/">Home</Link>
-      <Link to="/topics">Topics</Link>
-      <Link to="/quiz">Quiz</Link>
+      {/* ✅ show name at end */}
+      <span style={{ marginLeft: "auto", marginRight: "10px" }}>
+        👤 {name}
+      </span>
 
-      {/* ✅ FIX: give default topic */}
-      <Link to="/coding">Code</Link>
-
+      <button onClick={logout}>Logout</button>
     </nav>
   );
 }

@@ -22,6 +22,33 @@ function Signup() {
 
   return (
     <form onSubmit={handleSubmit}>
+      <style>
+        {
+          `
+          form{
+          display:flex;
+          flex-direction:column;
+          justify-content:center;
+          align-items:center;
+          
+          }
+          input{
+          border:0.7px solid grey;
+          border-radius:7px;
+          width:500px;
+          margin-top:10px;
+          margin-bottom:10px;
+          padding:7px;}
+          .hi{
+          border-radius:7px;
+          width:500px;
+          margin-top:10px;
+          margin-bottom:10px;
+          padding:7px;
+          }
+          `
+        }
+      </style>
       <h2>Signup</h2>
 
       {msg && <p>{msg}</p>}
@@ -30,7 +57,7 @@ function Signup() {
       <input placeholder="Email" onChange={e => setForm({...form, email: e.target.value})} />
       <input type="password" placeholder="Password" onChange={e => setForm({...form, password: e.target.value})} />
 
-      <button>Signup</button>
+      <button className="hi">Signup</button>
 
       {/* 🔗 Login link */}
       <p>

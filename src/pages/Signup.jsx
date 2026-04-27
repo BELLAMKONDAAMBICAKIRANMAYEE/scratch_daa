@@ -11,7 +11,7 @@ function Signup() {
     e.preventDefault();
 
     try {
-      await axios.post("https://scratchbackend-2.onrender.com/api/auth/signup", form);
+      await axios.post( `${import.meta.env.VITE_API_URL}/api/auth/signup`, form);
 
       setMsg("✅ Signup successful");
       navigate("/login"); // 👉 go to login

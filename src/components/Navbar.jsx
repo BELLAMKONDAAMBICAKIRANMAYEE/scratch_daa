@@ -109,7 +109,7 @@ function Navbar({ toggleSidebar }) {
       </button>
 
 
-      <h3 className="logo">Scratch_daa</h3>
+      <h3 className="logo">Scratch_Daa</h3>
 
       {/* Desktop Menu */}
       <div className="nav-links">

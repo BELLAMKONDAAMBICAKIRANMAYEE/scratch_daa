@@ -32,7 +32,7 @@ function Sidebar({ isOpen, setIsOpen }) {
         {isOpen ? "⬅" : "➡"}
       </button>
 
-      <h3>{isOpen ? "📚 Topics" : "📚"}</h3>
+      <h3>{isOpen ? "📚 Topics" : "📂"}</h3>
 
       {data.topics.map((t) => (
         <div key={t.id} className="sidebar-item">
